@@ -3,9 +3,10 @@
 const express = require('express');
 const router = express.Router();
 // class
+const collclass= require('../models/data-collection-class');
 const clothes = require('../models/clothes');
 //new obj from the class
-const clothesInstance = new clothes(); 
+const clothesInstance = new collclass(clothes); 
 
 // add my RESTFUL APIs declarations
 router.get('/clothes', getClothes);
